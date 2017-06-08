@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python2
 #coding=utf-8
 
 import tornado.ioloop
@@ -14,17 +14,13 @@ class MainHandler(tornado.web.RequestHandler):
         self.write(response.body)
     def post(self):
         key = self.get_argument("key")
-        self.set_status(300,reason=None)
         key = key+"1"
         self.write(key)
 def make_app():
     return tornado.web.Application([
-        (r"/",MainHandler)
-        ,
-        (r"/demo",DemoHandler)
-        ,
-        (r"/search",Searchhandler)
-        ,
+        (r"/",MainHandler),
+        (r"/demo",DemoHandler),
+        (r"/search",Searchhandler),
     ],
         debug= True
 
