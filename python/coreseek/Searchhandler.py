@@ -17,3 +17,4 @@ class Searchhandler(tornado.web.RequestHandler):
         key = self.get_argument("key")
         seap = searchQ()
         p = seap.search(qm=key)
+        self.write(p)

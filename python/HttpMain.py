@@ -1,35 +1,42 @@
 #!/usr/bin/python2
-#coding=utf-8
+# coding=utf-8
 
 import tornado.ioloop
 import tornado.web
 import tornado.httpclient
 from python.compy.Demohandler import DemoHandler
 from python.coreseek.Searchhandler import Searchhandler
+
+
 class MainHandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
     def get(self):
         http = tornado.httpclient.AsyncHTTPClient()
         response = yield http.fetch("http://www.baidu.com")
         self.write(response.body)
+
     def post(self):
         key = self.get_argument("key")
-        key = key+"1"
+        key = key + "1"
         self.write(key)
+
+
 def make_app():
     return tornado.web.Application([
-        (r"/",MainHandler),
-        (r"/demo",DemoHandler),
-        (r"/search",Searchhandler),
+        (r"/", MainHandler),
+        (r"/demo", DemoHandler),
+        (r"/search", Searchhandler),
     ],
-        debug= True
+        debug=True
 
     )
+
+
 def main():
     app = make_app()
     app.listen(8887)
     tornado.ioloop.IOLoop.current().start()
 
-if __name__=="__main__":
-    main()
 
+if __name__ == "__main__":
+    main()

@@ -1,7 +1,7 @@
 #
 # $Id$
 #
-#!/usr/bin/python2
+#!/usr/bin/python3
 #coding=utf-8
 from python.coreseek.sphinxapi import *
 import sys, time
