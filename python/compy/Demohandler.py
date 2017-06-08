@@ -6,7 +6,7 @@ import tornado.web
 import tornado.httpclient
 
 
-class DemoHandler(tornado.web.RequestHandler):
+class Demohandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
     def get(self):
         http = tornado.httpclient.AsyncHTTPClient()
