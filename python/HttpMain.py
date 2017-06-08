@@ -4,8 +4,8 @@
 import tornado.ioloop
 import tornado.web
 import tornado.httpclient
-from python.compy.Demohandler import Demohandler
-from python.coreseek.Searchhandler import Searchhandler
+from compy.Demohandler import Demohandler
+from coreseek.Searchhandler import Searchhandler
 
 
 class MainHandler(tornado.web.RequestHandler):
