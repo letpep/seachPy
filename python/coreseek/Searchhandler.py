@@ -4,7 +4,7 @@
 import tornado.ioloop
 import tornado.web
 import tornado.httpclient
-from python.coreseek.searchQ import searchQ
+from searchQ import searchQ
 
 class Searchhandler(tornado.web.RequestHandler):
     @tornado.gen.coroutine
