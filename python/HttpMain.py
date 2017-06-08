@@ -24,7 +24,7 @@ class MainHandler(tornado.web.RequestHandler):
 def make_app():
     return tornado.web.Application([
         (r"/", MainHandler),
-        (r"/demo", DemoHandler),
+        (r"/demo", Demohandler),
         (r"/search", Searchhandler),
     ],
         debug=True
