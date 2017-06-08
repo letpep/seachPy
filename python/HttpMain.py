@@ -27,7 +27,7 @@ def make_app():
         (r"/demo", Demohandler),
         (r"/search", Searchhandler),
     ],
-        debug=True
+        # debug=True
 
     )
 
