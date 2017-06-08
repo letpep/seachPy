@@ -3,7 +3,7 @@
 #
 #!/usr/bin/python3
 #coding=utf-8
-from python.coreseek.sphinxapi import *
+from sphinxapi import *
 import sys, time
 
 
